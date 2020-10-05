@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest" data-id="Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest"><a class="anchor hidden-xs" href="#Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest" title="Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest"><span class="octicon octicon-link"></span></a><span>Convención de Nombres para Pruebas Unitarias  -  Unit&nbsp;Test</span></h1><p><span>Imagen creada con flamingtext</span></p><p><span>Esté artículo se ha basado en las opiniones de la comunidad y pretende listar las formas mas populares de nombrar a las pruebas unitarias con información recogida de otros artículos y fuentes. Para saber mas y visitarlas:</span></p><ul>
+    <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true"><h1 id="Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest" data-id="Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest"><a class="anchor hidden-xs" href="#Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest" title="Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest"><span class="octicon octicon-link"></span></a><span>Convención de Nombres para Pruebas Unitarias  -  Unit&nbsp;Test</span></h1><p><span>Imagen creada con flamingtext</span></p><p><span>Esté artículo se ha basado en las opiniones de la comunidad y pretende listar las formas mas populares de nombrar a las pruebas unitarias con información recogida de otros artículos y fuentes. Para saber mas y visitarlas:</span></p><ul>
 <li><a href="https://g.co/kgs/u9A5u9" target="_blank" rel="noopener"><span>TDD by Example</span></a></li>
 <li><a href="https://g.co/kgs/4htXwc" target="_blank" rel="noopener"><span>Clean code</span></a></li>
 <li><a href="https://stackoverflow.com/questions/155436/unit-test-naming-best-practices/1594049#1594049" target="_blank" rel="noopener"><span>Unit test naming best practices</span></a></li>
@@ -99,7 +99,7 @@
 </code></pre><ul>
 <li><strong><span>Ventaja</span></strong><span>: posee toda la información que necesitamos saber sobre el método de una forma estructurada.</span></li>
 <li><strong><span>Desventaja</span></strong><span>: si cambia el nombre del método hay que cambiar el nombre del test.</span></li>
-</ul><h3 id="Estrategia-“Roy-Osherove’s”-Expected-State" data-id="Estrategia-“Roy-Osherove’s”-Expected-State"><a class="anchor hidden-xs" href="#Estrategia-“Roy-Osherove’s”-Expected-State" title="Estrategia-“Roy-Osherove’s”-Expected-State"><span class="octicon octicon-link"></span></a><span>Estrategia “Roy Osherove’s” Expected-State</span></h3><p><span>Al igual que pasa en la propuesta “Should-When” está la forma contratia de Roy Osherove’s donde primero se declara lo que se espera y luego el estado.</span></p><p><span>Patrón: </span><code>[UnitOfWork_ExpectedBehavior_StateUnderTest]</code></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-comment">#Prueba es adulto… es falso… tiene menos de 18 años</span>
+</ul><h3 id="Variante-“Roy-Osherove’s”-Expected-State" data-id="Variante-“Roy-Osherove’s”-Expected-State"><a class="anchor hidden-xs" href="#Variante-“Roy-Osherove’s”-Expected-State" title="Variante-“Roy-Osherove’s”-Expected-State"><span class="octicon octicon-link"></span></a><span>Variante “Roy Osherove’s” Expected-State</span></h3><p><span>Al igual que pasa en la propuesta “Should-When” está la forma contratia de Roy Osherove’s donde primero se declara lo que se espera y luego el estado.</span></p><p><span>Patrón: </span><code>[UnitOfWork_ExpectedBehavior_StateUnderTest]</code></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-comment">#Prueba es adulto… es falso… tiene menos de 18 años</span>
 <span class="hljs-number">1</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_is_false_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">2</span>    age = <span class="hljs-number">17</span>
 <span class="hljs-number">3</span>    
@@ -168,16 +168,16 @@
 <li class=""><a href="#Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest" title="Convención de Nombres para Pruebas Unitarias  -  Unit&nbsp;Test">Convención de Nombres para Pruebas Unitarias  -  Unit&nbsp;Test</a><ul class="nav">
 <li><a href="#Convenciones" title="Convenciones">Convenciones</a></li>
 <li><a href="#Clase-a-probar" title="Clase a probar">Clase a probar</a></li>
-<li class=""><a href="#Top-6" title="Top 6">Top 6</a><ul class="nav">
+<li><a href="#Top-6" title="Top 6">Top 6</a><ul class="nav">
 <li><a href="#Estrategia-“Should…When”" title="Estrategia “Should…When”">Estrategia “Should…When”</a></li>
 <li><a href="#Variante-“When…Should”" title="Variante “When…Should”">Variante “When…Should”</a></li>
 <li><a href="#Adaptación-de-“When-y-Should”-al-Contexto" title="Adaptación de “When y Should” al Contexto">Adaptación de “When y Should” al Contexto</a></li>
 <li><a href="#Estrategia-“Roy-Osherove’s”-State-Expected" title="Estrategia “Roy Osherove’s” State-Expected">Estrategia “Roy Osherove’s” State-Expected</a></li>
-<li><a href="#Estrategia-“Roy-Osherove’s”-Expected-State" title="Estrategia “Roy Osherove’s” Expected-State">Estrategia “Roy Osherove’s” Expected-State</a></li>
+<li><a href="#Variante-“Roy-Osherove’s”-Expected-State" title="Variante “Roy Osherove’s” Expected-State">Variante “Roy Osherove’s” Expected-State</a></li>
 <li><a href="#Estrategia-UnitOfWork" title="Estrategia [UnitOfWork]">Estrategia [UnitOfWork]</a></li>
 <li><a href="#Estrategia-featureBeingTested" title="Estrategia [featureBeingTested]">Estrategia [featureBeingTested]</a></li>
 <li><a href="#Estrategia-“When…Expect”" title="Estrategia “When…Expect”">Estrategia “When…Expect”</a></li>
-<li class=""><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
+<li><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
@@ -194,16 +194,16 @@
 <li class=""><a href="#Convención-de-Nombres-para-Pruebas-Unitarias---UnitnbspTest" title="Convención de Nombres para Pruebas Unitarias  -  Unit&nbsp;Test">Convención de Nombres para Pruebas Unitarias  -  Unit&nbsp;Test</a><ul class="nav">
 <li><a href="#Convenciones" title="Convenciones">Convenciones</a></li>
 <li><a href="#Clase-a-probar" title="Clase a probar">Clase a probar</a></li>
-<li class=""><a href="#Top-6" title="Top 6">Top 6</a><ul class="nav">
+<li><a href="#Top-6" title="Top 6">Top 6</a><ul class="nav">
 <li><a href="#Estrategia-“Should…When”" title="Estrategia “Should…When”">Estrategia “Should…When”</a></li>
 <li><a href="#Variante-“When…Should”" title="Variante “When…Should”">Variante “When…Should”</a></li>
 <li><a href="#Adaptación-de-“When-y-Should”-al-Contexto" title="Adaptación de “When y Should” al Contexto">Adaptación de “When y Should” al Contexto</a></li>
 <li><a href="#Estrategia-“Roy-Osherove’s”-State-Expected" title="Estrategia “Roy Osherove’s” State-Expected">Estrategia “Roy Osherove’s” State-Expected</a></li>
-<li><a href="#Estrategia-“Roy-Osherove’s”-Expected-State" title="Estrategia “Roy Osherove’s” Expected-State">Estrategia “Roy Osherove’s” Expected-State</a></li>
+<li><a href="#Variante-“Roy-Osherove’s”-Expected-State" title="Variante “Roy Osherove’s” Expected-State">Variante “Roy Osherove’s” Expected-State</a></li>
 <li><a href="#Estrategia-UnitOfWork" title="Estrategia [UnitOfWork]">Estrategia [UnitOfWork]</a></li>
 <li><a href="#Estrategia-featureBeingTested" title="Estrategia [featureBeingTested]">Estrategia [featureBeingTested]</a></li>
 <li><a href="#Estrategia-“When…Expect”" title="Estrategia “When…Expect”">Estrategia “When…Expect”</a></li>
-<li class=""><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
+<li><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
