@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" data-id="Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test"><a class="anchor hidden-xs" href="#Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" title="Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test"><span class="octicon octicon-link"></span></a><span>Convención de Nombres para Pruebas Unitarias — Unit Test</span></h1><p><img src="https://i.imgur.com/1S2gDBD.png" alt=""></p><p><span>Imagen creada con flamingtext</span></p><p><span>Esté artículo se ha basado en las opiniones de la comunidad y pretende listar las formas mas populares de nombrar a las pruebas unitarias con información recogida de otros artículos y fuentes. Para saber mas y visitarlas:</span></p><ul>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" data-id="Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test"><a class="anchor hidden-xs" href="#Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" title="Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test"><span class="octicon octicon-link"></span></a><span>Convención de Nombres para Pruebas Unitarias — Unit Test</span></h1><p><img src="https://i.imgur.com/1S2gDBD.png" alt=""></p><p><em><span>Imagen creada con </span><a href="https://flamingtext.com/" target="_blank" rel="noopener"><span>flamingtext</span></a></em></p><p><span>Esté artículo se ha basado en las opiniones de la comunidad y pretende listar las formas mas populares de nombrar a las pruebas unitarias junto con ejemplos de uso, con información recogida de otros artículos y fuentes. Para saber mas y visitarlas:</span></p><ul>
 <li><a href="https://g.co/kgs/u9A5u9" target="_blank" rel="noopener"><span>TDD by Example</span></a></li>
 <li><a href="https://g.co/kgs/4htXwc" target="_blank" rel="noopener"><span>Clean code</span></a></li>
 <li><a href="https://stackoverflow.com/questions/155436/unit-test-naming-best-practices/1594049#1594049" target="_blank" rel="noopener"><span>Unit test naming best practices</span></a></li>
@@ -42,40 +42,36 @@
 <li><a href="https://medium.com/@stefanovskyi/unit-test-naming-conventions-dd9208eadbea" target="_blank" rel="noopener"><span>Unit test naming conventions</span></a></li>
 </ul><div class="alert alert-info">
 <p><span>El lenguaje elegido para los ejemplos ha sido Python y para el artículo el Español, con la visión de contribuir a la generación de contenido técnico en ésta lengua, aunque no hay que olvidar que es importante que el código y los comentarios estén inglés, favoreciendo que distintas personas puedan aprender y colaborar con él.</span></p>
-</div><h2 id="Convenciones" data-id="Convenciones"><a class="anchor hidden-xs" href="#Convenciones" title="Convenciones"><span class="octicon octicon-link"></span></a><span>Convenciones</span></h2><p><span>Las convenviones son básicamente estándares que recogen las reglas mínimas para hacer algo.</span></p><p><span>Ventajas:</span></p><ul>
+</div><h2 id="Convenciones" data-id="Convenciones"><a class="anchor hidden-xs" href="#Convenciones" title="Convenciones"><span class="octicon octicon-link"></span></a><span>Convenciones</span></h2><p><span>Las convenciones son básicamente estándares que recogen las reglas mínimas para hacer algo.</span></p><p><span>Ventajas:</span></p><ul>
 <li><span>Facilitan la lectura y entendimiento del código.</span></li>
 <li><span>Reducen el coste del mantenimineto del código.</span></li>
 <li><span>Agilizan el desarrollo cuando colaboran varios desarrolladores.</span></li>
 <li><span>Facilitan agregar o modificar funconalidades.</span></li>
 </ul><blockquote>
-<p><span>Si se decide adptar una convención en un equipo, es recomendable que todos los miembros estén de acuerdo con la elección, intentando dejar atrás los dogmas personales y promover los comunes, ya que es </span><strong><span>una decisión que deberán seguir todas las personas del equipo</span></strong><span> actuales y las futuras.</span></p>
+<p><span>Para adoptar convenciones de equipo, es recomendable que todos los miembros estén de acuerdo con la elección, priorizando las decisiones de equipo frente a dogmas personales porque es </span><strong><span>una decisión que deberán seguir todas las personas del equipo</span></strong><span> actuales y las futuras.</span></p>
 </blockquote><div class="alert alert-warning">
 <p><span>Una vez </span><strong><span>elegida la convención</span></strong><span>, una buena práctica es </span><strong><span>dejar constancia</span></strong><span> de los acuerdos sobre las convenciones sobre el proyecto.</span></p>
 </div><blockquote>
 <p><span>Por ejemplo un archivo dentro del proyecto con un nombre auto-explicativo, que tenga una referencia desde el “README” para facilitar su contexto y localización.</span></p>
-</blockquote><h2 id="Clase-a-probar" data-id="Clase-a-probar"><a class="anchor hidden-xs" href="#Clase-a-probar" title="Clase-a-probar"><span class="octicon octicon-link"></span></a><span>Clase a probar</span></h2><pre><code class=":python hljs"><span class="hljs-number">1</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_adult</span><span class="hljs-params">(age)</span>:</span>
-<span class="hljs-number">2</span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> isinstance(age, int):
-<span class="hljs-number">3</span>        <span class="hljs-keyword">raise</span> Exception(<span class="hljs-string">'Age should to be number: {}'</span>.format(age))
-<span class="hljs-number">4</span>
-<span class="hljs-number">5</span>    adult = <span class="hljs-keyword">True</span>
-<span class="hljs-number">6</span>
-<span class="hljs-number">7</span>    <span class="hljs-keyword">if</span> age &lt; <span class="hljs-number">18</span>:
-<span class="hljs-number">8</span>        adult = <span class="hljs-keyword">False</span>
-<span class="hljs-number">9</span>
-<span class="hljs-number">10</span>    <span class="hljs-keyword">return</span> adult
+</blockquote><h2 id="Clase-a-probar" data-id="Clase-a-probar"><a class="anchor hidden-xs" href="#Clase-a-probar" title="Clase-a-probar"><span class="octicon octicon-link"></span></a><span>Clase a probar</span></h2><pre><code class=":python hljs"><span class="hljs-number">1</span> MIN_AGE_TO_BE_ADULT = <span class="hljs-number">18</span>
+<span class="hljs-number">2</span>  
+<span class="hljs-number">3</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_adult</span><span class="hljs-params">(age)</span>:</span>
+<span class="hljs-number">4</span>    <span class="hljs-keyword">assert</span> isinstance(age, int), <span class="hljs-string">"Age should be a number"</span>
+<span class="hljs-number">5</span>      
+<span class="hljs-number">6</span>    <span class="hljs-keyword">return</span> age &lt; MIN_AGE_TO_BE_ADULT
 </code></pre><h2 id="Top-9" data-id="Top-9"><a class="anchor hidden-xs" href="#Top-9" title="Top-9"><span class="octicon octicon-link"></span></a><span>Top 9</span></h2><h3 id="Estrategia-“Should…When”" data-id="Estrategia-“Should…When”"><a class="anchor hidden-xs" href="#Estrategia-“Should…When”" title="Estrategia-“Should…When”"><span class="octicon octicon-link"></span></a><span>Estrategia “Should…When”</span></h3><p><span>El enfoque te tiene ésta estrategia es decir expresamente que se espera y cuando se espera, es una estratégia muy popular y es la precursora de la estratégia “Roy Osherove’s”&nbsp;que se comenta en el siguiente punto.</span></p><p><span>Patrón: </span><code>[UnitOfWork_ShouldStateUnderTest_WhenExpectedBehavior]</code></p><p><span>Ejemplo:</span></p><pre><code class=": hljs"><span class="hljs-number">1</span> <span class="hljs-comment">#Prueba es adulto... debe ser falso..  cuando tiene menos de 18 años</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_should_to_be_false_when_age_is_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
-<span class="hljs-number">4</span>
+<span class="hljs-number">4</span>    
 <span class="hljs-number">5</span>    adult = is_adult(age)
-<span class="hljs-number">6</span>
+<span class="hljs-number">6</span>    
 <span class="hljs-number">7</span>    <span class="hljs-keyword">self</span>.assertEqual(adult, False)
 </code></pre><h3 id="Variante-“When…Should”" data-id="Variante-“When…Should”"><a class="anchor hidden-xs" href="#Variante-“When…Should”" title="Variante-“When…Should”"><span class="octicon octicon-link"></span></a><span>Variante “When…Should”</span></h3><p><span>Ésta variante se utiliza con el enfoque de que la lectura del test es menos forzado que la variante “Should…When”</span></p><p><span>Patrón: </span><code>[UnitOfWork_ShouldStateUnderTest_WhenExpectedBehavior]</code></p><p><span>Ejemplo:</span></p><pre><code class=": hljs"><span class="hljs-number">1</span> <span class="hljs-comment">#Prueba es adulto… debería ser falso…cuando es mejor de 18 años</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_should_to_be_false_when_age_is_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
-<span class="hljs-number">4</span>
+<span class="hljs-number">4</span>   
 <span class="hljs-number">5</span>    adult = is_adult(age)
-<span class="hljs-number">6</span>
+<span class="hljs-number">6</span>    
 <span class="hljs-number">7</span>    <span class="hljs-keyword">self</span>.assertEqual(adult, False)
 </code></pre><ul>
 <li><strong><span>Ventaja:</span></strong><span> posee toda la información que necesitamos saber sobre el método de una forma estructurada.</span></li>
@@ -83,7 +79,7 @@
 </ul><h3 id="Adaptación-de-“When-y-Should”-al-Contexto" data-id="Adaptación-de-“When-y-Should”-al-Contexto"><a class="anchor hidden-xs" href="#Adaptación-de-“When-y-Should”-al-Contexto" title="Adaptación-de-“When-y-Should”-al-Contexto"><span class="octicon octicon-link"></span></a><span>Adaptación de “When y Should” al Contexto</span></h3><p><span>Podemos variar las palabras “Should” y “When” adaptándolas al contexto de la prueba, por ejemplo en vez de “when” usar un </span><strong><span>“with” o "without"</span></strong></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-number">1</span> <span class="hljs-comment">#Prueba es adulto… debe lanzar una excepción… sin edad</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_should_throws_exception_without_age</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-string">'17'</span>
-<span class="hljs-number">4</span>
+<span class="hljs-number">4</span>    
 <span class="hljs-number">5</span>    with <span class="hljs-keyword">self</span>.assertRaises(Exception):
 <span class="hljs-number">6</span>        is_adult(age)
 </code></pre><ul>
@@ -92,9 +88,9 @@
 </ul><h3 id="Estrategia-“Roy-Osherove’s”-State-Expected" data-id="Estrategia-“Roy-Osherove’s”-State-Expected"><a class="anchor hidden-xs" href="#Estrategia-“Roy-Osherove’s”-State-Expected" title="Estrategia-“Roy-Osherove’s”-State-Expected"><span class="octicon octicon-link"></span></a><span>Estrategia “Roy Osherove’s” State-Expected</span></h3><p><span>Es una alternativa al uso de “Should…When” que pretende que se exprese mejor el objetivo específico.</span></p><p><span>Frecuentemente se usa el nombre del método o el objeto a testear en la parte de “UnitOfWork”.</span></p><p><span>Puedes consultar en la web del creador Roy Osherove’s (</span><a href="https://osherove.com/blog/2012/5/15/test-naming-conventions-with-unit-of-work.html" target="_blank" rel="noopener"><span>visitar blog</span></a><span>).</span></p><p><span>Patrón: </span><code>[UnitOfWork_StateUnderTest_ExpectedBehavior]</code></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-number">1</span> <span class="hljs-comment">#Prueba es adulto… menor de 18 años… es falso</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_age_is_less_than_18_is_false</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
-<span class="hljs-number">4</span>
+<span class="hljs-number">4</span>    
 <span class="hljs-number">5</span>    adult = is_adult(age)
-<span class="hljs-number">6</span>
+<span class="hljs-number">6</span>    
 <span class="hljs-number">7</span>    <span class="hljs-keyword">self</span>.assertEqual(adult, False)
 </code></pre><ul>
 <li><strong><span>Ventaja</span></strong><span>: posee toda la información que necesitamos saber sobre el método de una forma estructurada.</span></li>
@@ -102,9 +98,9 @@
 </ul><h3 id="Variante-“Roy-Osherove’s”-Expected-State" data-id="Variante-“Roy-Osherove’s”-Expected-State"><a class="anchor hidden-xs" href="#Variante-“Roy-Osherove’s”-Expected-State" title="Variante-“Roy-Osherove’s”-Expected-State"><span class="octicon octicon-link"></span></a><span>Variante “Roy Osherove’s” Expected-State</span></h3><p><span>Al igual que pasa en la propuesta “Should-When” está la forma contratia de Roy Osherove’s donde primero se declara lo que se espera y luego el estado.</span></p><p><span>Patrón: </span><code>[UnitOfWork_ExpectedBehavior_StateUnderTest]</code></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-number">1</span> <span class="hljs-comment">#Prueba es adulto… es falso… tiene menos de 18 años</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_is_false_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
-<span class="hljs-number">4</span>
+<span class="hljs-number">4</span>    
 <span class="hljs-number">5</span>    adult = is_adult(age)
-<span class="hljs-number">6</span>
+<span class="hljs-number">6</span>    
 <span class="hljs-number">7</span>    <span class="hljs-keyword">self</span>.assertEqual(adult, False)
 </code></pre><ul>
 <li><strong><span>Ventaja</span></strong><span>: posee toda la información que necesitamos saber sobre el método de una forma estructurada.</span></li>
@@ -112,9 +108,9 @@
 </ul><h3 id="Estrategia-UnitOfWork" data-id="Estrategia-UnitOfWork"><a class="anchor hidden-xs" href="#Estrategia-UnitOfWork" title="Estrategia-UnitOfWork"><span class="octicon octicon-link"></span></a><span>Estrategia [UnitOfWork]</span></h3><p><span>Se pretende declarar que es lo que se está probando, la característica que se va a probar forma parte del nombre de la prueba.</span></p><p><span>Patrón: </span><code>[UnitOfWork]</code></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-number">1</span> <span class="hljs-comment">#Prueba es adulto</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_an_adult</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">18</span>
-<span class="hljs-number">4</span>
+<span class="hljs-number">4</span>    
 <span class="hljs-number">5</span>    adult = is_adult(age)
-<span class="hljs-number">6</span>
+<span class="hljs-number">6</span>    
 <span class="hljs-number">7</span>    <span class="hljs-keyword">self</span>.assertTrue(adult)
 </code></pre><ul>
 <li><strong><span>Ventaja</span></strong><span>: Refleja de forma concisa y breve el nombre de la unidad que se prueba.</span></li>
@@ -123,9 +119,9 @@
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_minor_when_there_are_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
 <span class="hljs-number">4</span>    expected_response = False
-<span class="hljs-number">5</span>
+<span class="hljs-number">5</span>    
 <span class="hljs-number">6</span>    minor = is_adult(age)
-<span class="hljs-number">7</span>
+<span class="hljs-number">7</span>    
 <span class="hljs-number">8</span>    <span class="hljs-keyword">self</span>.assertEqual(minor, expected_response)
 </code></pre><ul>
 <li><strong><span>Ventaja</span></strong><span>: Refleja de forma concisa y breve la funcionalidad.</span></li>
@@ -135,9 +131,9 @@
 </div><h3 id="Estrategia-“When…Expect”" data-id="Estrategia-“When…Expect”"><a class="anchor hidden-xs" href="#Estrategia-“When…Expect”" title="Estrategia-“When…Expect”"><span class="octicon octicon-link"></span></a><span>Estrategia “When…Expect”</span></h3><p><span>Al parecer guarda similitud con la forma de testear recomendada por Google Test (visitar)</span></p><p><span>Patrón:</span><code>[WhenXXX_ExpectYYYY]</code></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-number">1</span> <span class="hljs-comment">#Prueba cuando… es adulto… esperamos… que sea falso" (o algo así literal)</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_when_is_less_than_18_expected_to_be_false</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
-<span class="hljs-number">4</span>
+<span class="hljs-number">4</span>    
 <span class="hljs-number">5</span>    adult = is_adult(age)
-<span class="hljs-number">6</span>
+<span class="hljs-number">6</span>    
 <span class="hljs-number">7</span>    <span class="hljs-keyword">self</span>.assertEqual(adult, False)
 </code></pre><ul>
 <li><strong><span>Ventaja</span></strong><span>: Ayuda a generar documentación automática con TestDox</span></li>
@@ -155,7 +151,20 @@
 <p><span>Existen librerías como “</span><a href="https://cucumber.io/" target="_blank" rel="noopener"><span>cucumber</span></a><span>” que ayudan a que una persona no técnica pueda escribir las pruebas.</span></p>
 </div><h2 id="Conclusión" data-id="Conclusión"><a class="anchor hidden-xs" href="#Conclusión" title="Conclusión"><span class="octicon octicon-link"></span></a><span>Conclusión</span></h2><p><span>Realizar pruebas es una maestría como cualquier otra, </span><strong><span>requiere un esfuerzo en aprenderla y practicarla</span></strong><span> con lo que tiene su pertinente curva de aprendizaje, pero en mi opinión el beneficio que ofrece tener código probado sobre el que poder hacer cambios y la documentación de la funcionalidad, hace que </span><strong><span>merezca la pena</span></strong><span> el esfuerzo.</span></p><blockquote>
 <p><span>Tu yo del futuro y cualquier persona que tenga que cambiar el código agradecerá que hayan pruebas con nombres auto-explicativos.</span></p>
-</blockquote><p><span>La legibilidad de las pruebas ayuda a saber que és lo que se está probando y además, tener una salida legible por consola a la hora de probarlos.</span></p><p><span>Actualmente uso la librería </span><a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener"><span>UnitTest</span></a><span> y no permite agrupar utilizando contextos como puede hacer la librería de Test </span><a href="https://rspec.info/" target="_blank" rel="noopener"><span>Rspec</span></a><span> en el lenguaje </span><a href="https://www.ruby-lang.org/es/" target="_blank" rel="noopener"><span>Ruby</span></a><span> (Rspec tiene enfoque BDD y muchas ayudas a la hora de testear, es poesía).</span></p><p><span>Para visualizar los test de forma ordenada por consola a la hora de darle nombre declaro primero lo que estoy probando y luego los detalles, para ir comprobando que he probado todos los escenarios de forma rápida, “Roy Osherove’s” State-Expected.</span></p><p><img src="https://i.imgur.com/s9XiZJP.png" alt=""></p></div>
+</blockquote><p><span>La legibilidad de las pruebas ayuda a saber que és lo que se está probando y además, tener una salida legible por consola a la hora de probarlos.</span></p><h2 id="Mi-punto" data-id="Mi-punto"><a class="anchor hidden-xs" href="#Mi-punto" title="Mi-punto"><span class="octicon octicon-link"></span></a><span>Mi punto</span></h2><p><span>Actualmente uso la librería </span><a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener"><span>UnitTest</span></a><span> por requisitos de la aplicación con la que estoy trabajando.</span></p><p><span>Con ese escenario, para poder visualizar los test por consola de forma ordenada y comprobar que estoy cubriendo todos los casos, utilizo generalmente la estratégia “Roy Osherove’s” State-Expected.</span></p><div class="alert alert-info">
+<p><span>En python podemos usar la libreía </span><a href="https://github.com/nestorsalceda/mamba" target="_blank" rel="noopener"><span>Mamba</span></a><span> para testear con enfoque BDD que ayuda a generar pruebas mas legibles, es un proyecto que se está levantando desde la comunidad.</span></p>
+</div><p><img src="https://i.imgur.com/eBtQaYm.png" alt=""></p><p><em><span>Imagen creada con </span><a href="https://flamingtext.com/" target="_blank" rel="noopener"><span>flamingtext</span></a></em></p><h2 id="Agradecimientos" data-id="Agradecimientos"><a class="anchor hidden-xs" href="#Agradecimientos" title="Agradecimientos"><span class="octicon octicon-link"></span></a><span>Agradecimientos</span></h2><ul>
+<li><span>Anthonny Contreras: Por motivarme para hacer éste documento.</span></li>
+<li><span>Angel Berho: Por ayudarme a “pitonizar” la clase de ejemplo y animarme a codificar los ejemplos.</span></li>
+<li><span>Andrea Carrozzo, Miguel Ángel Sánchez, Kristaps Goncarovs, Jonathan Rodríguez: Por las revisiones gramaticales.</span></li>
+<li><span>Lorenzo González: Por animarme a mejorar la visualización de los ejemplos de código.</span></li>
+<li><span>David Lluna: Por la recomendación de la librería Mamba.</span></li>
+<li><span>Nuria de las Heras: Por tu apoyo incondicional.</span></li>
+</ul><h2 id="Visitar-en" data-id="Visitar-en"><a class="anchor hidden-xs" href="#Visitar-en" title="Visitar-en"><span class="octicon octicon-link"></span></a><span>Visitar en:</span></h2><ul>
+<li><span>Medium : </span><a href="https://medium.com/@stlmedrano/convenci%C3%B3n-de-nombres-para-pruebas-unitarias-unit-test-76f643fb73a8" target="_blank" rel="noopener"><span>visitar</span></a></li>
+<li><span>GitHub : </span><a href="https://github.com/divae/test-naming-conventions" target="_blank" rel="noopener"><span>visitar</span></a></li>
+<li><span>Web : </span><a href="https://divae.github.io/test-naming-conventions" target="_blank" rel="noopener"><span>visitar</span></a></li>
+</ul></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
@@ -179,6 +188,9 @@
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
+<li class=""><a href="#Mi-punto" title="Mi punto">Mi punto</a></li>
+<li><a href="#Agradecimientos" title="Agradecimientos">Agradecimientos</a></li>
+<li><a href="#Visitar-en" title="Visitar en:">Visitar en:</a></li>
 </ul>
 </li>
 </ul>
@@ -204,6 +216,9 @@
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
+<li class=""><a href="#Mi-punto" title="Mi punto">Mi punto</a></li>
+<li><a href="#Agradecimientos" title="Agradecimientos">Agradecimientos</a></li>
+<li><a href="#Visitar-en" title="Visitar en:">Visitar en:</a></li>
 </ul>
 </li>
 </ul>
