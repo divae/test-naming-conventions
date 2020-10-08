@@ -43,7 +43,7 @@
 </ul><p><span>Preparación:</span></p><ul>
 <li><span>Lenguaje ejemplos: Python.</span></li>
 <li><span>Librería par las pruebas: UnitTest</span></li>
-<li><span>Lenguaje tutorial: Español</span></li>
+<li><span>Lenguaje del artículo: Español</span></li>
 </ul><div class="alert alert-info">
 <p><span>Es recomendable programar en inglés para favorecer que distintas personas puedan aprender y colaborar en los proyectos.</span></p>
 </div><h2 id="Convenciones" data-id="Convenciones"><a class="anchor hidden-xs" href="#Convenciones" title="Convenciones"><span class="octicon octicon-link"></span></a><span>Convenciones</span></h2><p><span>Las convenciones son básicamente estándares que recogen las reglas mínimas para hacer algo.</span></p><p><span>Ventajas:</span></p><ul>
@@ -129,7 +129,11 @@
 <li><strong><span>Ventaja</span></strong><span>: Refleja de forma concisa y breve la funcionalidad.</span></li>
 <li><strong><span>Desventaja</span></strong><span>: No necesariamente tiene que referenciar al método que se está probando.</span></li>
 </ul><div class="alert alert-info">
-<p><span>Estas dos modalidades anteriores son las que recomienda Ken Beck en el libro Test Driven Development: By Example escrito en el 2002 y también pueden verse en el libro de “Clean Code” de Robert C. Martin, usadas en el framework de pruebas JUnit</span></p>
+<p><span>Estas dos modalidades anteriores son las que recomienda Ken Beck en el libro Test Driven Development (</span><a href="https://g.co/kgs/MAJgn9" target="_blank" rel="noopener"><span>TDD</span></a><span>): By Example escrito en el 2002 y también pueden verse en el libro de “Clean Code” de Robert C. Martin, usadas en el framework de pruebas </span><a href="https://junit.org/junit5/" target="_blank" rel="noopener"><span>JUnit</span></a></p>
+</div><div class="alert alert-warning">
+<p><span>“Programar haciendo TDD” (Test Driven Development), como coloquialmente decimos, consiste en programar haciendo pruebas.</span></p>
+<p><span>Eso quiere decir que primero haces la prueba, luego la implementación y luego modificas el código para mejorarlo, con la tranquilidad que hay pruebas que te avisan si algo ha&nbsp;fallado.</span></p>
+<p><span>Personalmente me ha dado muchos beneficios programar así.</span></p>
 </div><h3 id="Estrategia-“When…Expect”" data-id="Estrategia-“When…Expect”"><a class="anchor hidden-xs" href="#Estrategia-“When…Expect”" title="Estrategia-“When…Expect”"><span class="octicon octicon-link"></span></a><span>Estrategia “When…Expect”</span></h3><p><span>Al parecer guarda similitud con la forma de testear recomendada por Google Test (visitar)</span></p><p><span>Patrón:</span><code>[WhenXXX_ExpectYYYY]</code></p><p><span>Ejemplo:</span></p><pre><code class=":python hljs"><span class="hljs-number">1</span> <span class="hljs-comment"># cuando… es adulto… esperamos… que sea falso" (o algo así literal)</span>
 <span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_when_is_less_than_18_expected_to_be_false</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
@@ -147,14 +151,17 @@
 </code></pre><ul>
 <li><strong><span>Ventaja</span></strong><span>: Personas no técnicas pueden escribir los test.</span></li>
 <li><strong><span>Desventaja</span></strong><span>: Requiere el compromiso de la compañía para favorecer una estructura agilista.</span></li>
-</ul><blockquote>
-<p><span>Es una estrategia que se promueve desde el paradigma BDD donde se pretende que las pruebas se puedan generar incluso en lenguaje natural donde las pruebas se pretenden que las puedan hacer personas que no sepan programar. (</span><a href="https://en.wikipedia.org/wiki/Behavior-driven_development" target="_blank" rel="noopener"><span>ver mas ejemplos de pruebas BDD</span></a><span>…)</span></p>
-</blockquote><div class="alert alert-info">
+</ul><div class="alert alert-warning">
+<p><span>Segun wikipedia, </span><a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento" target="_blank" rel="noopener"><span>Behavior Driven Development (BDD)</span></a><span> es un proceso de desarrollo que surgió a partir de </span><a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas#:~:text=Desarrollo%20guiado%20por%20pruebas%20de%20software%2C%20o%20Test%2Ddriven%20development" target="_blank" rel="noopener"><span>TDD</span></a><span>. Combina las técnicas generales del desarrollo guiado por comportamiento, el </span><a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_guiado_por_el_dominio" target="_blank" rel="noopener"><span>diseño guiado por el dominio</span></a><span>, el análisis y </span><a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_y_dise%C3%B1o_orientado_a_objetos" target="_blank" rel="noopener"><span>diseño orientado a objetos</span></a><span> y a los equipos de administración con un proceso utilizando herramientas colaborativas con un procedimiento colaborativo en el desarrollo de software.</span></p>
+</div><blockquote></blockquote><div class="alert alert-info">
 <p><span>Existen librerías como “</span><a href="https://cucumber.io/" target="_blank" rel="noopener"><span>cucumber</span></a><span>” que ayudan a que una persona no técnica pueda escribir las pruebas.</span></p>
-</div><h2 id="Conclusión" data-id="Conclusión"><a class="anchor hidden-xs" href="#Conclusión" title="Conclusión"><span class="octicon octicon-link"></span></a><span>Conclusión</span></h2><p><span>Realizar pruebas es una maestría como cualquier otra, </span><strong><span>requiere un esfuerzo en aprenderla y practicarla</span></strong><span> con lo que tiene su pertinente curva de aprendizaje, pero en mi opinión el beneficio que ofrece tener código probado sobre el que poder hacer cambios y la documentación de la funcionalidad, hace que </span><strong><span>merezca la pena</span></strong><span> el esfuerzo.</span></p><blockquote>
+</div><p><span>Puedes visitar éste artículo para saber más </span><a href="https://www.federico-toledo.com/buenas-practicas-de-cucumber/" target="_blank" rel="noopener"><span>Buenas prácticas de cucumber</span></a></p><h2 id="Conclusión" data-id="Conclusión"><a class="anchor hidden-xs" href="#Conclusión" title="Conclusión"><span class="octicon octicon-link"></span></a><span>Conclusión</span></h2><p><span>Realizar pruebas es una maestría como cualquier otra, </span><strong><span>requiere un esfuerzo en aprenderla y practicarla</span></strong><span> con lo que tiene su pertinente curva de aprendizaje, pero en mi opinión el beneficio que ofrece tener código probado sobre el que poder hacer cambios y la documentación de la funcionalidad, hace que </span><strong><span>merezca la pena</span></strong><span> el esfuerzo.</span></p><blockquote>
 <p><span>Tu yo del futuro y cualquier persona que tenga que cambiar el código agradecerá que hayan pruebas con nombres auto-explicativos.</span></p>
-</blockquote><p><span>La legibilidad de las pruebas ayuda a saber que es lo que se está probando y además, tener una salida legible por consola a la hora de probarlos.</span></p><h2 id="Mi-punto" data-id="Mi-punto"><a class="anchor hidden-xs" href="#Mi-punto" title="Mi-punto"><span class="octicon octicon-link"></span></a><span>Mi punto</span></h2><p><span>Actualmente uso la librería </span><a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener"><span>UnitTest</span></a><span> por requisitos de la aplicación con la que estoy trabajando.</span></p><p><span>Con ese escenario, para poder visualizar los test por consola de forma ordenada y comprobar que estoy cubriendo todos los casos, utilizo generalmente la estratégia “Roy Osherove’s” State-Expected.</span></p><div class="alert alert-info">
-<p><span>En Python podemos usar la librería </span><a href="https://github.com/nestorsalceda/mamba" target="_blank" rel="noopener"><span>Mamba</span></a><span> para probar con enfoque BDD que ayuda a generar pruebas mas legibles, es un proyecto que se está levantando desde la comunidad que merece la pena&nbsp;probar.</span></p>
+</blockquote><p><span>La legibilidad de las pruebas ayuda a saber que es lo que se está probando y además, tener una salida legible por consola a la hora de probarlos.</span></p><div class="alert alert-danger">
+<p><span>El testing de software puede verificar la presencia de errores pero no la ausencia de ellos.</span></p>
+<p><span>Autor: Edsger Dijkstra</span></p>
+</div><p><span>(Referencia obtenida de </span><a href="https://softwarecrafters.io/javascript/tdd-test-driven-development" target="_blank" rel="noopener"><span>softwarecrafters.io</span></a><span>)</span></p><h2 id="Mi-punto" data-id="Mi-punto"><a class="anchor hidden-xs" href="#Mi-punto" title="Mi-punto"><span class="octicon octicon-link"></span></a><span>Mi punto</span></h2><p><span>Actualmente uso la librería </span><a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener"><span>UnitTest</span></a><span> por requisitos de la aplicación con la que estoy trabajando.</span></p><p><span>Con ese escenario, para poder visualizar los test por consola de forma ordenada y comprobar que estoy cubriendo todos los casos, utilizo generalmente la estratégia “Roy Osherove’s” State-Expected.</span></p><div class="alert alert-info">
+<p><span>En Python podemos usar la librería </span><a href="https://github.com/nestorsalceda/mamba" target="_blank" rel="noopener"><span>Mamba</span></a><span> para probar con enfoque </span><a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento" target="_blank" rel="noopener"><span>Behavior Driven Development (BDD)</span></a><span> que ayuda a generar pruebas mas legibles, es un proyecto que se está levantando desde la comunidad que merece la pena&nbsp;probar.</span></p>
 </div><p><img src="https://i.imgur.com/eBtQaYm.png" alt=""></p><p><em><span>Imagen creada con </span><a href="https://flamingtext.com/" target="_blank" rel="noopener"><span>flamingtext</span></a></em></p><h2 id="Agradecimientos" data-id="Agradecimientos"><a class="anchor hidden-xs" href="#Agradecimientos" title="Agradecimientos"><span class="octicon octicon-link"></span></a><span>Agradecimientos</span></h2><ul>
 <li><span>Anthonny Contreras: Por motivarme para hacer éste documento.</span></li>
 <li><span>Angel Berho: Por ayudarme a “pitonizar” la clase de ejemplo y animarme a codificar los ejemplos.</span></li>
@@ -179,7 +186,7 @@
 <li class=""><a href="#Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" title="Convención de Nombres para Pruebas Unitarias — Unit Test">Convención de Nombres para Pruebas Unitarias — Unit Test</a><ul class="nav">
 <li><a href="#Convenciones" title="Convenciones">Convenciones</a></li>
 <li><a href="#Función-a-probar" title="Función a probar">Función a probar</a></li>
-<li><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
+<li class=""><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
 <li><a href="#Estrategia-“Should…When”" title="Estrategia “Should…When”">Estrategia “Should…When”</a></li>
 <li><a href="#Variante-“When…Should”" title="Variante “When…Should”">Variante “When…Should”</a></li>
 <li><a href="#Adaptación-de-“When-y-Should”-aplicado-al-Contexto" title="Adaptación de “When y Should” aplicado al Contexto">Adaptación de “When y Should” aplicado al Contexto</a></li>
@@ -188,11 +195,11 @@
 <li><a href="#Estrategia-“Unidad-anbsptestear”" title="Estrategia “Unidad a&nbsp;testear”">Estrategia “Unidad a&nbsp;testear”</a></li>
 <li><a href="#Estrategia-“Característica-que-se-está-probando”" title="Estrategia “Característica que se está probando”">Estrategia “Característica que se está probando”</a></li>
 <li><a href="#Estrategia-“When…Expect”" title="Estrategia “When…Expect”">Estrategia “When…Expect”</a></li>
-<li><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
+<li class=""><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
-<li class=""><a href="#Mi-punto" title="Mi punto">Mi punto</a></li>
+<li><a href="#Mi-punto" title="Mi punto">Mi punto</a></li>
 <li><a href="#Agradecimientos" title="Agradecimientos">Agradecimientos</a></li>
 <li><a href="#Visitar-en" title="Visitar en:">Visitar en:</a></li>
 </ul>
@@ -207,7 +214,7 @@
 <li class=""><a href="#Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" title="Convención de Nombres para Pruebas Unitarias — Unit Test">Convención de Nombres para Pruebas Unitarias — Unit Test</a><ul class="nav">
 <li><a href="#Convenciones" title="Convenciones">Convenciones</a></li>
 <li><a href="#Función-a-probar" title="Función a probar">Función a probar</a></li>
-<li><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
+<li class=""><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
 <li><a href="#Estrategia-“Should…When”" title="Estrategia “Should…When”">Estrategia “Should…When”</a></li>
 <li><a href="#Variante-“When…Should”" title="Variante “When…Should”">Variante “When…Should”</a></li>
 <li><a href="#Adaptación-de-“When-y-Should”-aplicado-al-Contexto" title="Adaptación de “When y Should” aplicado al Contexto">Adaptación de “When y Should” aplicado al Contexto</a></li>
@@ -216,11 +223,11 @@
 <li><a href="#Estrategia-“Unidad-anbsptestear”" title="Estrategia “Unidad a&nbsp;testear”">Estrategia “Unidad a&nbsp;testear”</a></li>
 <li><a href="#Estrategia-“Característica-que-se-está-probando”" title="Estrategia “Característica que se está probando”">Estrategia “Característica que se está probando”</a></li>
 <li><a href="#Estrategia-“When…Expect”" title="Estrategia “When…Expect”">Estrategia “When…Expect”</a></li>
-<li><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
+<li class=""><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
-<li class=""><a href="#Mi-punto" title="Mi punto">Mi punto</a></li>
+<li><a href="#Mi-punto" title="Mi punto">Mi punto</a></li>
 <li><a href="#Agradecimientos" title="Agradecimientos">Agradecimientos</a></li>
 <li><a href="#Visitar-en" title="Visitar en:">Visitar en:</a></li>
 </ul>
