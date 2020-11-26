@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -62,14 +62,14 @@
 <span class="hljs-number">5</span>      
 <span class="hljs-number">6</span>    <span class="hljs-keyword">return</span> age &lt; MIN_AGE_TO_BE_ADULT
 </code></pre><h2 id="Top-9" data-id="Top-9"><a class="anchor hidden-xs" href="#Top-9" title="Top-9"><span class="octicon octicon-link"></span></a><span>Top 9</span></h2><h3 id="Estrategia-“Should…When”" data-id="Estrategia-“Should…When”"><a class="anchor hidden-xs" href="#Estrategia-“Should…When”" title="Estrategia-“Should…When”"><span class="octicon octicon-link"></span></a><span>Estrategia “Should…When”</span></h3><p><span>El enfoque te tiene ésta estrategia es decir expresamente que se espera y cuando se espera, es una estrategia muy popular y es la precursora de la estrategia “Roy Osherove’s”&nbsp;que se comenta en el siguiente punto.</span></p><p><span>Patrón: </span><code>[UnitOfWork_ShouldStateUnderTest_WhenExpectedBehavior]</code></p><p><span>Ejemplo:</span></p><pre><code class=": hljs"><span class="hljs-number">1</span> <span class="hljs-comment"># Prueba es adulto... debe ser falso..  cuando tiene menos de 18 años</span>
-<span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_should_to_be_false_when_age_is_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
+<span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_should_be_false_when_age_is_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>    age = <span class="hljs-number">17</span>
 <span class="hljs-number">4</span>    
 <span class="hljs-number">5</span>    adult = is_adult(age)
 <span class="hljs-number">6</span>    
 <span class="hljs-number">7</span>    <span class="hljs-keyword">self</span>.assertEqual(adult, False)
 </code></pre><h3 id="Variante-“When…Should”" data-id="Variante-“When…Should”"><a class="anchor hidden-xs" href="#Variante-“When…Should”" title="Variante-“When…Should”"><span class="octicon octicon-link"></span></a><span>Variante “When…Should”</span></h3><p><span>Ésta variante se utiliza con el enfoque de que la lectura del test es menos forzado que la variante “Should…When”</span></p><p><span>Patrón: </span><code>[UnitOfWork_ShouldStateUnderTest_WhenExpectedBehavior]</code></p><p><span>Ejemplo:</span></p><pre><code class=": hljs"><span class="hljs-number">1</span> <span class="hljs-comment"># Prueba es adulto... debe ser falso..  cuando tiene menos de 18 años</span>
-<span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_should_to_be_false_when_age_is_less_than_18</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
+<span class="hljs-number">2</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_adult_when_age_is_less_than_18_should_be_false</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
 <span class="hljs-number">3</span>     age = <span class="hljs-number">17</span>
 <span class="hljs-number">4</span>   
 <span class="hljs-number">5</span>    adult = is_adult(age)
@@ -165,7 +165,7 @@
 </div><p><img src="https://i.imgur.com/eBtQaYm.png" alt=""></p><p><em><span>Imagen creada con </span><a href="https://flamingtext.com/" target="_blank" rel="noopener"><span>flamingtext</span></a></em></p><h2 id="Agradecimientos" data-id="Agradecimientos"><a class="anchor hidden-xs" href="#Agradecimientos" title="Agradecimientos"><span class="octicon octicon-link"></span></a><span>Agradecimientos</span></h2><ul>
 <li><span>Anthonny Contreras: Por motivarme para hacer éste documento.</span></li>
 <li><span>Angel Berho: Por ayudarme a “pitonizar” la clase de ejemplo y animarme a codificar los ejemplos.</span></li>
-<li><span>Andrea Carrozzo, Miguel Ángel Sánchez, Kristaps Goncarovs, Jonathan Rodríguez: Por las revisiones gramaticales.</span></li>
+<li><span>Andrea Carrozzo, Miguel Ángel Sánchez, Kristaps Goncarovs, Jonathan Rodríguez, Darío Terrés: Por las revisiones gramaticales.</span></li>
 <li><span>Lorenzo González: Por animarme a mejorar la visualización de los ejemplos de código.</span></li>
 <li><span>David Lluna: Por la recomendación de la librería Mamba.</span></li>
 <li><span>Nuria de las Heras: Por tu apoyo incondicional.</span></li>
@@ -186,7 +186,7 @@
 <li class=""><a href="#Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" title="Convención de Nombres para Pruebas Unitarias — Unit Test">Convención de Nombres para Pruebas Unitarias — Unit Test</a><ul class="nav">
 <li><a href="#Convenciones" title="Convenciones">Convenciones</a></li>
 <li><a href="#Función-a-probar" title="Función a probar">Función a probar</a></li>
-<li class=""><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
+<li><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
 <li><a href="#Estrategia-“Should…When”" title="Estrategia “Should…When”">Estrategia “Should…When”</a></li>
 <li><a href="#Variante-“When…Should”" title="Variante “When…Should”">Variante “When…Should”</a></li>
 <li><a href="#Adaptación-de-“When-y-Should”-aplicado-al-Contexto" title="Adaptación de “When y Should” aplicado al Contexto">Adaptación de “When y Should” aplicado al Contexto</a></li>
@@ -195,7 +195,7 @@
 <li><a href="#Estrategia-“Unidad-anbsptestear”" title="Estrategia “Unidad a&nbsp;testear”">Estrategia “Unidad a&nbsp;testear”</a></li>
 <li><a href="#Estrategia-“Característica-que-se-está-probando”" title="Estrategia “Característica que se está probando”">Estrategia “Característica que se está probando”</a></li>
 <li><a href="#Estrategia-“When…Expect”" title="Estrategia “When…Expect”">Estrategia “When…Expect”</a></li>
-<li class=""><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
+<li><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
@@ -214,7 +214,7 @@
 <li class=""><a href="#Convención-de-Nombres-para-Pruebas-Unitarias-—-Unit-Test" title="Convención de Nombres para Pruebas Unitarias — Unit Test">Convención de Nombres para Pruebas Unitarias — Unit Test</a><ul class="nav">
 <li><a href="#Convenciones" title="Convenciones">Convenciones</a></li>
 <li><a href="#Función-a-probar" title="Función a probar">Función a probar</a></li>
-<li class=""><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
+<li><a href="#Top-9" title="Top 9">Top 9</a><ul class="nav">
 <li><a href="#Estrategia-“Should…When”" title="Estrategia “Should…When”">Estrategia “Should…When”</a></li>
 <li><a href="#Variante-“When…Should”" title="Variante “When…Should”">Variante “When…Should”</a></li>
 <li><a href="#Adaptación-de-“When-y-Should”-aplicado-al-Contexto" title="Adaptación de “When y Should” aplicado al Contexto">Adaptación de “When y Should” aplicado al Contexto</a></li>
@@ -223,7 +223,7 @@
 <li><a href="#Estrategia-“Unidad-anbsptestear”" title="Estrategia “Unidad a&nbsp;testear”">Estrategia “Unidad a&nbsp;testear”</a></li>
 <li><a href="#Estrategia-“Característica-que-se-está-probando”" title="Estrategia “Característica que se está probando”">Estrategia “Característica que se está probando”</a></li>
 <li><a href="#Estrategia-“When…Expect”" title="Estrategia “When…Expect”">Estrategia “When…Expect”</a></li>
-<li class=""><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
+<li><a href="#Estrategia-“Given-When-Then”" title="Estrategia “Given-When-Then”">Estrategia “Given-When-Then”</a></li>
 </ul>
 </li>
 <li><a href="#Conclusión" title="Conclusión">Conclusión</a></li>
